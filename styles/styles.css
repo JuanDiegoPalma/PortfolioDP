@@ -1,0 +1,68 @@
+.main-container {
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 56px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 330px;
+    background-image: url(../assets/fondo5.jpg);
+    background-size: cover;         
+    background-position: center;   
+    background-repeat: no-repeat;   
+}
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px); 
+    z-index: 0;
+}
+.main-container > * {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-primary {
+    background-color: #17e2c9;
+    border-color: #000000;
+    color: #000000;
+}
+
+.btn-primary:hover {
+    background-color: #bdbdbd;
+    color: #000000;
+    border-color: #000000;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
+.accordion {
+    margin-left: 50px;           
+    margin-right: 50px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        padding: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box:nth-child(1) {
+        grid-column-start: span 1;
+    }
+
+    .box:nth-child(4) {
+        grid-column-start: span 1;
+    }
+}
